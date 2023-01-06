@@ -3,15 +3,19 @@ import { NavLink } from "react-router-dom"
 
 function Aside(props) {
 
+    console.log(localStorage.userdata)
 
     const path = window.location.pathname
+
+
+
 
     return (
         <>
             <nav className="navbar">
                 <ul>
                     <li>
-                        <NavLink to={`/details/2`}>
+                        <NavLink to={`/details/2`} exact>
                             <a href="#" className={path.includes('details') ? "white" : "silver"}>Profile</a>
                         </NavLink>
 
